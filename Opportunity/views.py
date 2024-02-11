@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def home (request):
-    return render(request, 'home.html', {'name': 'Juan Esteban Barrios'})
+def index (request):
+    return render(request, 'index.html')
 def about (request):
     return render(request, 'about.html')
+def comun(request):
+    return render(request, 'comun.html')
