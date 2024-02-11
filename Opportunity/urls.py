@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# Taller1_Opportunity/urls.py
 
 from django.contrib import admin
 from django.urls import path
@@ -21,6 +22,6 @@ from Opportunity import views as OpportunityViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', OpportunityViews.home, name='home'),
-    path('about/', OpportunityViews.about, name='about'),
+    path('', OpportunityViews.index, name='index'),  # Debe ser una cadena vacía}
+    path('comun.html', OpportunityViews.comun, name='comun'),
 ]
