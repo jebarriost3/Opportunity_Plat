@@ -15,12 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from Opportunity import views as OpportunityViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', OpportunityViews.index, name='index'),  # Debe ser una cadena vacía}
     path('comun.html', OpportunityViews.comun, name='comun'),
+    path('egresado/', include('egresado.urls')),
 ]
 
